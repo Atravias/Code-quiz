@@ -1,0 +1,24 @@
+.center {
+    text-align: center !important;
+    align-self: center;
+}
+
+button {
+    border: 1px lightblue solid;
+}
+
+.btn {
+    border: 5px blue solid;
+    margin: 15px;
+    height: 70px;
+
+    width: 100%;
+    
+}
+
+#question-one #question-two #question-three  #question-four  #question-five{
+
+    font-weight: 600;
+
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-2">View High Scores</div>
+        <div class="col-md-8"></div>
+        <div class="col-md-2 time-left">Time Left<span id="timer"> 60 </span>seconds</div>
+    </div>
+    <div class="container">
+        <h1 class="center">
+            Question:<span id="question-number">1</span>
+        </h1>
+        <div id="question-one question-two question-three question-four question-five">
+            sdsd
+        </div>
+        <div id="_answer1" onclick="answer('answer1')" class="btn btn-info answer1">#answer1</div>
+        <div id="_answer2" onclick="answer('answer2')" class="btn btn-info answer2">#answer2</div>
+        <div id="_answer3" onclick="answer('answer3')" class="btn btn-info answer3">#answer3</div>
+        <div id="_answer4" onclick="answer('answer4')" class="btn btn-info answer4">#answer4</div>
+    </div>
+    <script src="./questions.js"></script>
+</body>
+
+</html>

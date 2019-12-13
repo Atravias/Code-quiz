@@ -1,3 +1,5 @@
+// window.onload = function () {
+
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -22,33 +24,39 @@ var questions = [
     {
         title: "what does 'attr' stand for?",
         choices: ["adder", "attorney", "attraction", "attribute"],
-        answer: "parentheses"
+        answer: "attribute"
     },
 
 ];
 
-var start = document.getElementById("start");
+var score = 0;
 
-var timerCount = setInterval(countdown, 1000);
-
-var btn = querySelector(".btn");
-
-var timer = getElementsByClassName(".timer");
+var start = document.getElementsByClassName(".start");
 
 
 
-var questionNumber = document.querySelector(".question-number");
+var btn = document.getElementsByClassName(".btn");
 
-var questionOne = document.querySelector(".question-one");
-var questionOne = questions[0].title
+var count = document.getElementsByClassName("#timer");
 
-var questionTwo = document.querySelector(".question-two");
 
-var questionThree = document.querySelector(".question-three");
 
-var questionFour = document.querySelector(".question-four");
+var questionNumber = document.getElementsByClassName(".question-number");
 
-var questionFive = document.querySelector(".question-five");
+var questionOne = document.getElementsByClassName(".question-one");
+var questionOne = questions[0].title;
+
+var questionTwo = document.getElementsByClassName(".question-two");
+var questionTwo = questions[1].title;
+
+var questionThree = document.getElementsByClassName(".question-three");
+var questionThree = questions[2].title;
+
+var questionFour = document.getElementsByClassName(".question-four");
+var questionFour = questions[3].title;
+
+var questionFive = document.getElementsByClassName(".question-five");
+var questionFive = questions[4].title;
 
 
 var answerOne = document.getElementsByClassName(".answer1");
@@ -59,76 +67,102 @@ var answerThree = document.getElementsByClassName(".answer3");
 
 var answerFour = document.getElementsByClassName(".answer4");
 
-start.addEventListener("click", quiz);
 
-questionOne.innerHTML = questions[0].title.toString;
 
-function quiz() {
-    questionOne.innerHTML = questions[0].title;
-    questionTwo.innerHTML = questions[1].title;
-    questionThree.innerHTML = questions[2].title;
-    questionFour.innerHTML = questions[3].title;
-    questionFive.innerHTML = questions[4].title;
 
-}
+// function quiz() {
+//     questionOne.innerHTML = questions[0].title;
+//     questionTwo.innerHTML = questions[1].title;
+//     questionThree.innerHTML = questions[2].title;
+//     questionFour.innerHTML = questions[3].title;
+//     questionFive.innerHTML = questions[4].title;
 
-var _answer1 = document.getElementById(_answer1, "hi");
-console.log(_answer1)
+// }
 
-function answer(_answer1) {
-    if (answerOne === questions[0, 1, 2, 3, 4].answer) {
-        return "CORRECT!";
-    } else {
-        return "False.";
+// var _answer1 = document.getElementById("#_answer1").textContent;
+// var _answer2 = document.getElementById("_answer2").textContent;
+// var _answer3 = document.getElementById("_answer3").textContent;
+// var _answer4 = document.getElementById("_answer4").textContent;
+
+
+
+function go() {
+    count = 60;
+    if (count === 0) {
+        return score;
+    } else if (count > 0) {
+        count--;
     }
-
-
+    return count;
 }
-function answer(_answer2) {
-    if (answerTwo === questions[0, 1, 2, 3, 4].answer) {
-        return "CORRECT!";
-    } else {
-        return "False.";
+
+
+
+
+document.getElementById("#question-one, #question-two, #question-three, #question-four, #question-five") = function () {
+    var newDiv = document.getElementById("doctor");
+    check = 0;
+    if (check == false) {
+        this = questions[0].title
+    };
+
+
+};
+
+
+
+var check = document.getElementById('answer1').addEventListener("click", function () {
+
+    function ans() {
+        if (answerOne === false) {
+            alert("false")
+        } else {
+            alert("correct")
+        }
+        if (answerTwo === false) {
+            alert("false")
+        } else {
+            alert("correct")
+        }
+        if (answerThree === false) {
+            alert("false")
+        } else {
+            alert("correct")
+        }
+        if (answerFour === false) {
+            alert("false")
+        } else {
+            alert("correct")
+        }
+
+        alert(ans);
     }
-
-
-}
-function answer() {
-    if (answerThree === questions[0, 1, 2, 3, 4].answer) {
-        return "CORRECT!";
-    } else {
-        return "False.";
-    }
-
-
-}
-function answer() {
-    if (answerFour === questions[0, 1, 2, 3, 4].answer) {
-        return "CORRECT!";
-    } else {
-        return "False.";
-    }
-
-
-}
-
+    ans();
+})
 
 if (count === 0) {
     alert("Out of time!");
     clearTimeout;
 }
 
-function wrongChoice() {
-    var timer = 60;
-    var deductTime = setInterval(function () {
-        document.getElementById(timer, "sad").innerHTML = timer + " seconds remaining";
+function wrong() {
+    timer = 60;
+    var answers = {
+        answerOne,
+        answerTwo,
+        answerThree,
+        answerFour
+    }
+    var deduceTime = setInterval(function () {
+        document.getElementById("#timer").innerHTML = timer + " seconds remaining";
         timer -= 15;
     }, 1000);
-    if (answer === true) {
+    if (answers === true) {
         return null;
     }
     else {
-        deductTime();
+        deduceTime();
     }
-    wrongChoice();
-};
+    wrong();
+}
+;
